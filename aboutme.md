@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: My journey of how learning, exploring and discovering on how technology can make a difference
+subtitle: My journey of  learning, exploring and discovering on how technology can make a difference
 ---
 
 Hello my name is Nancy Mulokozi, I would like to welcome you to know more about me and my current journey in biomedical engineering.
