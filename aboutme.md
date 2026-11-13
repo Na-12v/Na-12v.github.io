@@ -1,16 +1,17 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: My journey of how learning, exploring and discovering on how technology can make a difference
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+Hello my name is Nancy Mulokozi, I would like to welcome you to know more about me and my current journey in biomedical engineering.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- I'm creating this so as you could get to know on my areas of interest and the things that I am learning along the way. 
+  
 
-What else do you need?
+
 
 ### My story
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+I was born and raised in Tanzania which is found at the eastern part of Africa, I completed my primary studies at 2019 then I went on for further studies where I completed my O-level studies in 2023 then I accomplished my A-level studies in 2026, I am enrolled in Lovely Proffesional University in Punjab India, where I am taking a course  on Biomedical Engineering 
+In my short time here in the university i've got to learn that biomedical engineering requires alot of commitment and discpline as it covers alot of areas that involve a relationship between engineering and medicine, what interest me is that it also engages with creativity and innovation and i personally enjoy exploring new ideas.
