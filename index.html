@@ -1,5 +1,159 @@
----
-layout: home
-title: Nancy Mulokozi|Biomedical Engineering
-subtitle: My journey of learning, exploring and discovering on how technology can make a difference
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biomedical Engineering Portfolio – Medical Device Design</title>
+<meta name="description" content="First-year biomedical engineering student building skills in medical device design with Arduino and Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F2F7F8;--card:#fff;--ink:#0F2B35;--muted:#4D6670;--line:#D3E1E5;--teal:#0B7A85;--pulse:#E0452B;--tint:#E1EFF1;--warn:#FCE3DC;--warnt:#A3260F;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0C1D24;--card:#122A33;--ink:#E7F2F4;--muted:#9BB4BC;--line:#23414C;--teal:#4FC3CE;--pulse:#FF7A5F;--tint:#16333D;--warn:#4A2219;--warnt:#FFB4A3}}
+:root[data-theme="dark"]{--paper:#0C1D24;--card:#122A33;--ink:#E7F2F4;--muted:#9BB4BC;--line:#23414C;--teal:#4FC3CE;--pulse:#FF7A5F;--tint:#16333D;--warn:#4A2219;--warnt:#FFB4A3}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--teal)}
+a:focus-visible{outline:3px solid var(--pulse);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:4px 20px;flex-wrap:wrap;align-items:center;padding-top:11px;padding-bottom:11px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;margin-right:auto}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{padding:60px 0 30px}
+.hero h1{font-size:clamp(38px,7vw,70px);font-weight:800;letter-spacing:-.02em;max-width:16ch}
+.lead{font-size:clamp(18px,2.4vw,22px);color:var(--muted);max-width:58ch;margin:20px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--teal)}
+.btn.main{background:var(--teal);color:var(--paper)}
+.ecg{width:100%;height:80px;margin-top:40px;display:block}
+.ecg path{fill:none;stroke:var(--pulse);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:d 2.6s ease-out forwards}
+@keyframes d{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.ecg path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 26px;max-width:62ch}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card p{margin:0 0 8px;color:var(--muted);font-size:16px}
+.card p:last-child{margin:0}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--tint);color:var(--teal);margin-bottom:12px}
+.tag.go{background:var(--warn);color:var(--warnt)}
+.usp{background:var(--teal);color:var(--paper);border-radius:12px;padding:28px;margin-top:8px}
+.usp h3{font-size:clamp(22px,3.4vw,30px);margin-bottom:10px}
+.usp p{margin:0;max-width:62ch;font-size:18px}
+.two{display:grid;gap:28px;grid-template-columns:1.4fr 1fr}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+.two p{margin:0 0 14px;max-width:62ch}
+.facts{margin:0;padding:0;list-style:none}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.facts li span{display:block;color:var(--muted);font-size:14px}
+.bar{height:8px;border-radius:99px;background:var(--tint);margin-top:14px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal)}
+.steps{list-style:none;margin:0;padding:0;border-left:3px solid var(--teal)}
+.steps li{padding:0 0 22px 22px;position:relative}
+.steps li::before{content:"";position:absolute;left:-10px;top:7px;width:17px;height:17px;border-radius:50%;background:var(--paper);border:3px solid var(--pulse)}
+.steps h3{font-size:19px;margin-bottom:4px}
+.steps p{margin:0;color:var(--muted);font-size:16px}
+footer{padding:34px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+<b>Biomedical Portfolio</b>
+<a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#roadmap">Roadmap</a><a href="#profiles">Profiles</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>Learning to design devices that help people heal.</h1>
+<p class="lead">First-year Biomedical Engineering student teaching myself Arduino and Python, with a goal of designing simple, affordable medical devices.</p>
+<div class="btns">
+<a class="btn main" href="#projects">See my projects</a>
+<a class="btn" href="https://github.com/na-12v" target="_blank" rel="noopener">GitHub</a>
+</div>
+<svg class="ecg" viewBox="0 0 900 90" preserveAspectRatio="none" role="img" aria-label="Heartbeat line"><path d="M0 50 H170 L195 50 L212 22 L236 80 L258 6 L280 66 L298 50 H470 L492 50 L508 34 L526 66 L540 50 H640 L662 50 L678 28 L700 74 L720 12 L742 62 L758 50 H900"/></svg>
+</div></header>
+
+<section id="about"><div class="wrap">
+<h2>About me</h2>
+<p class="sub">My career pathway: medical device design.</p>
+<div class="two">
+<div>
+<p>I chose biomedical engineering because I wanted to assist medical professionals in their work and help my country make medical services less expensive, so that these services are readily available.</p>
+<p>I’m at the start of my journey. I have no certifications or internships yet, but I have a background in graphic design, one Arduino project behind me and a clear direction.</p>
+</div>
+<ul class="facts">
+<li><span>Program</span>Biomedical Engineering, Year 1</li>
+<li><span>Career pathway</span>Medical device design</li>
+<li><span>Learning now</span>Arduino, Python, Git</li>
+<li><span>Open to</span>Projects, mentors, competitions, internships</li>
+</ul>
+</div>
+<div class="usp" style="margin-top:32px">
+<h3>What makes me different</h3>
+<p>Before engineering I worked as a graphic designer, where I loved creativity, innovation and branding. I also enjoy DIY hand crafts. I want to bring that design eye to medical devices, and build ones that make care cheaper and easier to reach.</p>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<p class="sub">Self-taught so far. The bars show my own honest progress, not mastery.</p>
+<div class="grid">
+<div class="card"><span class="tag">Learning</span><h3>Arduino</h3><p>Built a light-sensor circuit with a team: an LDR as input, an LED as output, and readings viewed on a computer.</p><div class="bar" aria-hidden="true"><i style="width:25%"></i></div></div>
+<div class="card"><span class="tag">Learning</span><h3>Python</h3><p>Core syntax, loops and functions. Next: reading and plotting sensor data.</p><div class="bar" aria-hidden="true"><i style="width:25%"></i></div></div>
+<div class="card"><span class="tag">Starting</span><h3>Git and GitHub</h3><p>Version control and publishing my work online.</p><div class="bar" aria-hidden="true"><i style="width:20%"></i></div></div>
+<div class="card"><span class="tag">Coursework</span><h3>Science foundations</h3><p>First-year biology and engineering basics that medical devices build on.</p><div class="bar" aria-hidden="true"><i style="width:30%"></i></div></div>
+</div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2>
+<p class="sub">One small project done and one I want to build next. Each shows its real status.</p>
+<div class="grid">
+<div class="card"><span class="tag">Completed (team project)</span><h3>LDR light sensor with LED</h3><p><b>What it does:</b> an LDR light sensor feeds an Arduino board, which controls an LED.</p><p><b>Tools:</b> Arduino board, LDR, LED, computer.</p><p><b>Result:</b> the LED turned on when the room got darker, and I viewed the sensor readings on my computer.</p></div>
+<div class="card"><span class="tag go">Dream project</span><h3>Agricultural growth sensor</h3><p><b>Goal:</b> build an Arduino sensor that supports agricultural growth.</p><p><b>Starting point:</b> my LDR light-sensor project.</p><p><b>Why:</b> to help farmers and make food production easier.</p></div>
+
+</div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<p class="sub">All the areas a portfolio should cover, with where I stand today.</p>
+<div class="grid">
+<div class="card"><span class="tag">Certifications</span><h3>None yet</h3><p>Plan: free online Python and electronics courses.</p></div>
+<div class="card"><span class="tag">Internships</span><h3>None yet</h3><p>Plan: seek an exposure placement at a hospital or device company once I have projects to show.</p></div>
+<div class="card"><span class="tag">Competitions</span><h3>None yet</h3><p>Plan: join a college hackathon or biomedical design challenge.</p></div>
+<div class="card"><span class="tag">Research</span><h3>None yet</h3><p>Plan: help a faculty lab with a small task.</p></div>
+<div class="card"><span class="tag">Leadership</span><h3>None yet</h3><p>Plan: join a student club and take on a small role.</p></div>
+<div class="card"><span class="tag">Technical profiles</span><h3>GitHub active</h3><p>My code and project notes will live on <a href="https://github.com/na-12v" target="_blank" rel="noopener">GitHub</a>.</p></div>
+</div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+<h2>Roadmap</h2>
+<p class="sub">What I plan to do next, in order.</p>
+<ol class="steps">
+<li><h3>Finish the Arduino basics</h3><p>Complete simple sensor and LED exercises and upload each one to GitHub.</p></li>
+<li><h3>Start my agricultural growth sensor</h3><p>Build on what I learned from the LDR project and write up what worked and what didn’t.</p></li>
+<li><h3>Add Python data analysis</h3><p>Log sensor readings and plot them with Python.</p></li>
+<li><h3>Look for competitions and an internship</h3><p>Use my finished projects as proof of my skills.</p></li>
+</ol>
+</div></section>
+
+<section id="profiles"><div class="wrap">
+<h2>Technical profiles</h2>
+<p class="sub">Where to find my work.</p>
+<div class="btns">
+<a class="btn main" href="https://github.com/na-12v" target="_blank" rel="noopener">GitHub</a>
+
+</div>
+</div></section>
+
+<footer><div class="wrap">Biomedical Engineering, Year 1. Portfolio version 1, November 2026.</div></footer>
+</body>
+</html>
