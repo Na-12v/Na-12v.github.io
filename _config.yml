@@ -20,11 +20,12 @@ author: Nancy Mulokozi
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-Education: "education"
-Skills: "skills"
-Projects: "projects"
-Contact: "contact"
+   About Me: "aboutme"
+  Education: "education"
+  Skills: "skills"
+  Projects: "projects"
+  Contact: "contact"
+
 ################
 # --- Logo --- #
 ################
